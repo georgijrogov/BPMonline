@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "77f28545-00e0-4ff0-92ce-354dfda84452",
+    "Name": "IteSwimmingProgramPeriodicity",
+    "ModifiedOnUtc": "\/Date(1613933608000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Base lookup",
+    "DependsOn": []
+  }
+}
