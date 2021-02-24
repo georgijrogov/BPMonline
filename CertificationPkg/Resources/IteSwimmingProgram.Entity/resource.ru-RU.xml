@@ -3,8 +3,13 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Программы плавания" />
+			<Item Name="Columns.IteCode.Caption" Value="Код" />
+			<Item Name="Columns.IteComment.Caption" Value="Комментарий" />
+			<Item Name="Columns.IteIsActive.Caption" Value="Активно" />
 			<Item Name="Columns.IteName.Caption" Value="Название" />
 			<Item Name="Columns.IteNotes.Caption" Value="Заметки" />
+			<Item Name="Columns.ItePeriodicity.Caption" Value="Периодичность" />
+			<Item Name="Columns.IteResponsible.Caption" Value="Ответственный" />
 		</Items>
 	</Group>
 </Resources>
