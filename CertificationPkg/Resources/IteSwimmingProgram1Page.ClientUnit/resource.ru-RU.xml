@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Страница редактирования: &quot;Программы плавания&quot;" />
+			<Item Name="LocalizableStrings.Tabd744485bTabLabelTabCaption.Value" Value="Занятия в бассейне" />
 		</Items>
 	</Group>
 </Resources>

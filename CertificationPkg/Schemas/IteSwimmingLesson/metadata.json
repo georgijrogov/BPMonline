@@ -1,0 +1,83 @@
+= MetaData.Schema.UId "c30c02e7-7474-4e17-830d-131dd4cb7367"
+= MetaData.Schema.A2 "IteSwimmingLesson"
+= MetaData.Schema.A5 "7fc4c88f-3496-4dfd-addd-254e3e0138a1"
+= MetaData.Schema.B6 "a3268297-5da7-4ac4-80fa-4bc375ea67ab"
+= MetaData.Schema.B8 "7.16.2.1600"
+= MetaData.Schema.EG1.UId "26ccdd4b-0114-428d-92ea-3e18d7a6e271"
+= MetaData.Schema.EG1.A2 "IteSwimmingLessonEventsProcess"
+= MetaData.Schema.EG1.A5 "7fc4c88f-3496-4dfd-addd-254e3e0138a1"
++ MetaData.Schema.EG1.B8 "7.16.2.1600"
+= MetaData.Schema.EG1.BK8 "7bb7d6a5-e7a3-4837-83bc-7f785d688165"
+= MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
++ MetaData.Schema.EG1.Labels []
+= MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D2 {
+  "UId": "a9a9d408-3d27-478c-9d11-f2064f19abb3",
+  "A2": "IteLessonDate",
+  "A3": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A4": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A5": "7fc4c88f-3496-4dfd-addd-254e3e0138a1",
+  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44"
+}
++ MetaData.Schema.D2 {
+  "UId": "f47a3ffa-7fb7-4533-87df-3d6625b0a39a",
+  "A2": "IteCoach",
+  "A3": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A4": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A5": "7fc4c88f-3496-4dfd-addd-254e3e0138a1",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "16be3651-8fe2-4159-8dd0-a803d4683dd3",
+  "E6": true,
+  "E17": "IteCoachId",
+  "E18": "IteCoachName"
+}
++ MetaData.Schema.D2 {
+  "UId": "c0239bed-aa24-4396-9be0-a2e256c3195b",
+  "A2": "IteMemberQuantity",
+  "A3": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A4": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A5": "7fc4c88f-3496-4dfd-addd-254e3e0138a1",
+  "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+}
++ MetaData.Schema.D2 {
+  "UId": "cc9069b4-75f0-4991-9293-edcc5b27b3dd",
+  "A2": "IteStatus",
+  "A3": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A4": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A5": "7fc4c88f-3496-4dfd-addd-254e3e0138a1",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "f8c98dae-1979-4361-b840-b2ce391d4c8e",
+  "E6": true,
+  "E17": "IteStatusId",
+  "E18": "IteStatusName"
+}
++ MetaData.Schema.D2 {
+  "UId": "c005ad8e-c9ac-47b0-bc1d-4ffbb7f21874",
+  "A2": "IteDuration",
+  "A3": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A4": "c30c02e7-7474-4e17-830d-131dd4cb7367",
+  "A5": "7fc4c88f-3496-4dfd-addd-254e3e0138a1",
+  "S2": "04cc757b-8f06-482c-8a1a-0c0e171d2410"
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","a9a9d408-3d27-478c-9d11-f2064f19abb3","f47a3ffa-7fb7-4533-87df-3d6625b0a39a","c0239bed-aa24-4396-9be0-a2e256c3195b","cc9069b4-75f0-4991-9293-edcc5b27b3dd","c005ad8e-c9ac-47b0-bc1d-4ffbb7f21874"]
+= MetaData.Schema.D20.A2 "IteSwimmingLessonEvents"
+- MetaData.Schema.EG1.B6
+- MetaData.Schema.EG1.BK29
+- MetaData.Schema.EG1.BK30
+- MetaData.Schema.D1
+- MetaData.Schema.D20.A5
+- MetaData.Schema.D20.FA4
+- MetaData.Schema.D20.FA5
+- MetaData.Schema.D20.FA6
+- MetaData.Schema.D20.FA7
+- MetaData.Schema.D20.FA11
+- MetaData.Schema.D20.FA12
+- MetaData.Schema.D20.FA15
++ MetaData.Schema.B7 false
++ MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false
++ MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16 false
++ MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16 false
++ MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16 false
++ MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16 false
++ MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16 false
