@@ -13,7 +13,23 @@ define("IteSwimmingProgram1Page", [], function() {
 				}
 			}
 		}/**SCHEMA_DETAILS*/,
-		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
+		businessRules: /**SCHEMA_BUSINESS_RULES*/{
+			"IteResponsible": {
+				"cb2b65d0-762c-4e44-b4cd-486d6b423c2e": {
+					"uId": "cb2b65d0-762c-4e44-b4cd-486d6b423c2e",
+					"enabled": true,
+					"removed": false,
+					"ruleType": 1,
+					"baseAttributePatch": "Type",
+					"comparisonType": 3,
+					"autoClean": false,
+					"autocomplete": false,
+					"type": 0,
+					"value": "60733efc-f36b-1410-a883-16d83cab0980",
+					"dataValueType": 10
+				}
+			}
+		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
@@ -53,23 +69,6 @@ define("IteSwimmingProgram1Page", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "IteResponsible1b4fa37b-fc2d-4e2d-847d-962230f9c44c",
-				"values": {
-					"layout": {
-						"colSpan": 24,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 3,
-						"layoutName": "ProfileContainer"
-					},
-					"bindTo": "IteResponsible"
-				},
-				"parentName": "ProfileContainer",
-				"propertyName": "items",
-				"index": 2
-			},
-			{
-				"operation": "insert",
 				"name": "ItePeriodicity329c77b5-ca55-42e1-baf0-b61f5e0a1913",
 				"values": {
 					"layout": {
@@ -80,6 +79,23 @@ define("IteSwimmingProgram1Page", [], function() {
 						"layoutName": "ProfileContainer"
 					},
 					"bindTo": "ItePeriodicity"
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "IteResponsible1b4fa37b-fc2d-4e2d-847d-962230f9c44c",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 3,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "IteResponsible"
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",

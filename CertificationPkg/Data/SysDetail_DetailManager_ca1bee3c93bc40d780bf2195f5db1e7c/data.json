@@ -1,0 +1,24 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "ca1bee3c-93bc-40d7-80bf-2195f5db1e7c"
+        },
+        {
+          "SchemaColumnUId": "49ad8ee2-65a6-4cdd-b8f6-85c2f10a54dc",
+          "Value": "Занятия в бассейне"
+        },
+        {
+          "SchemaColumnUId": "8585929c-62ae-4673-ae8d-bb37f87e5144",
+          "Value": "c39c727c-f1e8-4c7e-a187-47a3ba44a9ac"
+        },
+        {
+          "SchemaColumnUId": "631e7238-2751-4a21-b6d6-9f1ac0c84f95",
+          "Value": "423fb7ed-a8ea-440e-a5b5-1ca29801457f"
+        }
+      ]
+    }
+  ]
+}
