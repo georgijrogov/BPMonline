@@ -11,6 +11,14 @@ define("IteSwimmingProgram1Page", [], function() {
 					"masterColumn": "Id",
 					"detailColumn": "IteSwimmingProgram"
 				}
+			},
+			"IteSchema952f0e99Detail97c77f90": {
+				"schemaName": "IteSchema952f0e99Detail",
+				"entitySchemaName": "IteSwimmingLesson",
+				"filter": {
+					"detailColumn": "IteProgram",
+					"masterColumn": "Id"
+				}
 			}
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{
@@ -137,10 +145,10 @@ define("IteSwimmingProgram1Page", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "NotesAndFilesTab",
+				"name": "Tab78343efaTabLabel",
 				"values": {
 					"caption": {
-						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
+						"bindTo": "Resources.Strings.Tab78343efaTabLabelTabCaption"
 					},
 					"items": [],
 					"order": 0
@@ -148,6 +156,31 @@ define("IteSwimmingProgram1Page", [], function() {
 				"parentName": "Tabs",
 				"propertyName": "tabs",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "IteSchema952f0e99Detail97c77f90",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "Tab78343efaTabLabel",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "NotesAndFilesTab",
+				"values": {
+					"caption": {
+						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
+					},
+					"items": [],
+					"order": 1
+				},
+				"parentName": "Tabs",
+				"propertyName": "tabs",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -205,7 +238,7 @@ define("IteSwimmingProgram1Page", [], function() {
 				"operation": "merge",
 				"name": "ESNTab",
 				"values": {
-					"order": 1
+					"order": 2
 				}
 			}
 		]/**SCHEMA_DIFF*/

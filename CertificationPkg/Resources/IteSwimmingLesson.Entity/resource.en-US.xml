@@ -7,6 +7,7 @@
 			<Item Name="Columns.IteDuration.Caption" Value="Длительность" />
 			<Item Name="Columns.IteLessonDate.Caption" Value="Дата занятия" />
 			<Item Name="Columns.IteMemberQuantity.Caption" Value="Число участников" />
+			<Item Name="Columns.IteProgram.Caption" Value="Программа плавания" />
 			<Item Name="Columns.IteStatus.Caption" Value="Состояние занятия" />
 			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
 		</Items>
