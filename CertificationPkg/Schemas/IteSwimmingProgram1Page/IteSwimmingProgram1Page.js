@@ -38,7 +38,52 @@ define("IteSwimmingProgram1Page", [], function() {
 				}
 			}
 		}/**SCHEMA_BUSINESS_RULES*/,
-		methods: {},
+		methods: {
+			asyncValidate: function(callback, scope) {
+				this.callParent([function(response) {
+					if (!this.validateResponse(response)) {
+						return;
+					}
+					Terrasoft.chain(
+						function(next) {
+							this.validateSwimmingPrograms(function(response) {
+								if (this.validateResponse(response)) {
+									next();
+								}
+							}, this);
+						},
+						function(next) {
+							callback.call(scope, response);
+							next();
+						}, this);
+				}, this]);
+			},
+			validateSwimmingPrograms: function(callback, scope) {
+				Terrasoft.SysSettings.querySysSettingsItem("MaxActiveDailyLessons", function(maxCount) {
+					const idPeriodicity = "a815379d-f663-4d04-8a66-849b32c6f9e7";
+					var frequency = this.get("ItePeriodicity");
+					var active = this.get("IteIsActive");
+					var result = {success: true};
+					var ermsg = this.get("Resources.Strings.TooManyActiveDailyProgramCaption");
+					if (frequency.displayValue !== "Ежедневно" || active === false){
+						callback.call(scope || this, result);
+						return;
+					}
+					var esq = Ext.create("Terrasoft.EntitySchemaQuery", { rootSchemaName: "IteSwimmingProgram" });
+					esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 
+						"ItePeriodicity.Id", idPeriodicity));
+					esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
+						"IteIsActive", true));
+					esq.getEntityCollection(function(response) {
+						if (response && response.collection && response.collection.getCount() + 1 > maxCount){
+							result.message = ermsg;
+							result.success = false;
+						}
+						callback.call(scope || this, result);
+					}, this);
+				}, this);
+			}
+		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
@@ -169,77 +214,16 @@ define("IteSwimmingProgram1Page", [], function() {
 				"index": 0
 			},
 			{
-				"operation": "insert",
-				"name": "NotesAndFilesTab",
-				"values": {
-					"caption": {
-						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
-					},
-					"items": [],
-					"order": 1
-				},
-				"parentName": "Tabs",
-				"propertyName": "tabs",
-				"index": 1
+				"operation": "remove",
+				"name": "ESNTab"
 			},
 			{
-				"operation": "insert",
-				"name": "Files",
-				"values": {
-					"itemType": 2
-				},
-				"parentName": "NotesAndFilesTab",
-				"propertyName": "items",
-				"index": 0
+				"operation": "remove",
+				"name": "ESNFeedContainer"
 			},
 			{
-				"operation": "insert",
-				"name": "NotesControlGroup",
-				"values": {
-					"itemType": 15,
-					"caption": {
-						"bindTo": "Resources.Strings.NotesGroupCaption"
-					},
-					"items": []
-				},
-				"parentName": "NotesAndFilesTab",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "insert",
-				"name": "Notes",
-				"values": {
-					"bindTo": "IteNotes",
-					"dataValueType": 1,
-					"contentType": 4,
-					"layout": {
-						"column": 0,
-						"row": 0,
-						"colSpan": 24
-					},
-					"labelConfig": {
-						"visible": false
-					},
-					"controlConfig": {
-						"imageLoaded": {
-							"bindTo": "insertImagesToNotes"
-						},
-						"images": {
-							"bindTo": "NotesImagesCollection"
-						}
-					}
-				},
-				"parentName": "NotesControlGroup",
-				"propertyName": "items",
-				"index": 0
-			},
-			{
-				"operation": "merge",
-				"name": "ESNTab",
-				"values": {
-					"order": 2
-				}
+				"operation": "remove",
+				"name": "ESNFeed"
 			}
 		]/**SCHEMA_DIFF*/
 	};

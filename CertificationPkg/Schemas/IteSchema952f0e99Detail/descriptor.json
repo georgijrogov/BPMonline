@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "c39c727c-f1e8-4c7e-a187-47a3ba44a9ac",
     "Name": "IteSchema952f0e99Detail",
-    "ModifiedOnUtc": "\/Date(1614364465000)\/",
+    "ModifiedOnUtc": "\/Date(1614551847000)\/",
     "Parent": {
       "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
       "Name": "BaseGridDetailV2"
