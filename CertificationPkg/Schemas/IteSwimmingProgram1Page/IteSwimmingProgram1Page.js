@@ -1,4 +1,4 @@
-define("IteSwimmingProgram1Page", [], function() {
+define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "IteSwimmingProgram",
 		attributes: {},
@@ -75,17 +75,59 @@ define("IteSwimmingProgram1Page", [], function() {
 					esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
 						"IteIsActive", true));
 					esq.getEntityCollection(function(response) {
-						if (response && response.collection && response.collection.getCount() + 1 > maxCount){
-							result.message = ermsg;
+						if (response && response.collection && response.collection.getCount() + 1> maxCount){
+							result.message = ermsg.replace("{0}", maxCount);
 							result.success = false;
 						}
 						callback.call(scope || this, result);
 					}, this);
 				}, this);
+			},
+			onAddSomeSwimmingLessonsClick: function() {
+				debugger;
+				var swimmingProgramId = this.get("Id");
+				// Объект, который будет передан в качестве аргумента в метод executeProcess().
+				var args = {
+					// Имя процесса, который необходимо запустить.
+					sysProcessName: "IteSwimmingLessonsAddition",
+					// Объект со значением входящего параметра ContactParameter для процесса CustomProcess.
+					parameters: {
+						ProcessSchemaSwimmingProgramId: swimmingProgramId
+					}
+				};
+				// Запуск пользовательского бизнес-процесса.
+				ProcessModuleUtilities.executeProcess(args);
 			}
 		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
+			{
+				// Выполняется операция добавления элемента на страницу.
+				"operation": "insert",
+				// Мета-имя родительского контейнера, в который добавляется кнопка.
+				"parentName": "LeftContainer",
+				// Кнопка добавляется в коллекцию компонентов
+				// родительского элемента.
+				"propertyName": "items",
+				// Мета-имя добавляемой кнопки.
+				"name": "AddLessonsButton",
+				// Свойства, передаваемые в конструктор компонента.
+				"values": {
+					// Тип добавляемого элемента — кнопка.
+					"itemType": Terrasoft.ViewItemType.BUTTON,
+					// Привязка заголовка кнопки к локализуемой строке схемы.
+					"caption": {bindTo: "Resources.Strings.AddSomeSwimmingLessons"},
+					// Привязка метода-обработчика нажатия кнопки.
+					"click": {bindTo: "onAddSomeSwimmingLessonsClick"},
+					// Стиль отображения кнопки.
+					"style": Terrasoft.controls.ButtonEnums.style.GREEN,
+					"layout": {
+						"column": 1,
+						"row": 6,
+						"colSpan": 1
+					}
+				}
+			},
 			{
 				"operation": "insert",
 				"name": "IteName30a28320-b145-40bf-9498-1142b1a447fd",
