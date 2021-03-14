@@ -13,29 +13,25 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 	public class IteLessonDurationService: BaseService
 	{
 		[OperationContract]
-		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
+		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
 		ResponseFormat = WebMessageFormat.Json)]
-		public string GetDuration(string iteProgramId) {
+		public string GetDuration(string ProgramId)
+		{
 			var result = "";
 			TimeSpan overallDuration = new TimeSpan(0, 0, 0);
-			
-			var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "IteSwimmingProgram");
-			var colProgramId = esq.AddColumn("Id");
-			var colLessonDuration = esq.AddColumn("[IteSwimmingLesson:IteProgram:Id].IteDuration");
-			
-			var esqFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, "Id", iteProgramId);
+			var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "IteSwimmingLesson");
+			var colLessonDuration = esq.AddColumn("IteDuration");
+			var esqFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, "IteProgram.Id", ProgramId);
 			esq.Filters.Add(esqFilter);
-			
 			var entities = esq.GetEntityCollection(UserConnection);
 			
-			if (entities.Count > 0)
+			foreach (var entity in entities)
 			{
-				foreach(var entity in entities){
-					overallDuration = overallDuration + TimeSpan.Parse(entity.GetColumnValue(colLessonDuration.Name).ToString());
-				}
-				result = overallDuration.ToString();
+				overallDuration = overallDuration + entity.GetTypedColumnValue<TimeSpan>(colLessonDuration.Name);
 			}
-			else
+			result = overallDuration.ToString();
+			
+			if (entities.Count == 0)
 			{
 				result = "-1";
 			}
