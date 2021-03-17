@@ -25,7 +25,7 @@
 			<Item Name="BaseElements.ConditionalSequenceFlow3.Caption" Value="Еженедельно" />
 			<Item Name="BaseElements.ConditionalSequenceFlow6.Caption" Value="Условный поток 6" />
 			<Item Name="BaseElements.ConditionalSequenceFlow8.Caption" Value="Условный поток 8" />
-			<Item Name="BaseElements.DefaultSequenceFlow1.Caption" Value="Условный поток 7" />
+			<Item Name="BaseElements.DefaultSequenceFlow4.Caption" Value="Условный поток 5" />
 			<Item Name="BaseElements.ReadDataUserTask1.Caption" Value="Получить периодичность" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.AggregationColumnName.Caption" Value="Name of aggregate function column" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.CanReadUncommitedData.Caption" Value="Read uncommitted data" />

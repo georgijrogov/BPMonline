@@ -15,27 +15,21 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
 		ResponseFormat = WebMessageFormat.Json)]
-		public string GetDuration(string ProgramId)
+		public string GetDuration(string programId)
 		{
-			var result = "";
 			TimeSpan overallDuration = new TimeSpan(0, 0, 0);
 			var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "IteSwimmingLesson");
-			var colLessonDuration = esq.AddColumn("IteDuration");
-			var esqFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, "IteProgram.Id", ProgramId);
+			var lessonDurationCol = esq.AddColumn("IteDuration");
+			var esqFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, "IteProgram.Id", programId);
 			esq.Filters.Add(esqFilter);
 			var entities = esq.GetEntityCollection(UserConnection);
 			
 			foreach (var entity in entities)
 			{
-				overallDuration = overallDuration + entity.GetTypedColumnValue<TimeSpan>(colLessonDuration.Name);
+				overallDuration += entity.GetTypedColumnValue<TimeSpan>(lessonDurationCol.Name);
 			}
-			result = overallDuration.ToString();
-			
-			if (entities.Count == 0)
-			{
-				result = "-1";
-			}
-			
+			string result = entities.Count != 0 ? overallDuration.ToString() : "-1";
+
 			return result;
 		}
 	}

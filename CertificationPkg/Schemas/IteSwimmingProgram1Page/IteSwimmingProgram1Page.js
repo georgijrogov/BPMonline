@@ -2,6 +2,15 @@ define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessMo
 	return {
 		entitySchemaName: "IteSwimmingProgram",
 		attributes: {},
+		messages: {
+				//Имя сообщения.
+				"ReloadPageMessage": {
+					// Тип сообщения — широковещательное, без указания конкретного подписчика.
+					"mode": Terrasoft.MessageMode.BROADCAST,
+					// Направление сообщения — подписка.
+					"direction": Terrasoft.MessageDirectionType.SUBSCRIBE
+				}
+			},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
@@ -39,6 +48,21 @@ define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessMo
 			}
 		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
+			init: function() {
+					// Вызов родительского метода init().
+					this.callParent(arguments);
+					// Подписка на прием сообщения NewUserSet.
+					this.sandbox.subscribe("ReloadPageMessage", this.onReloadPageMessage, this);
+				},
+				// Обработчик события получения сообщения NewUserSet.
+			onReloadPageMessage: function(args) {
+					// Вывод содержимого в консоль браузера.
+					window.console.info("Получено сообщение: ReloadPageMessage");
+					this.updateDetail({
+						detail: "IteSchema952f0e99Detail97c77f90",
+						reloadAll: true
+					});
+				},
 			asyncValidate: function(callback, scope) {
 				this.callParent([function(response) {
 					if (!this.validateResponse(response)) {
@@ -75,7 +99,7 @@ define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessMo
 					esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
 						"IteIsActive", true));
 					esq.getEntityCollection(function(response) {
-						if (response && response.collection && response.collection.getCount() + 1> maxCount){
+						if (response && response.collection && response.collection.getCount() >= maxCount){
 							result.message = ermsg.replace("{0}", maxCount);
 							result.success = false;
 						}
@@ -84,7 +108,6 @@ define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessMo
 				}, this);
 			},
 			onAddSomeSwimmingLessonsClick: function() {
-				debugger;
 				var swimmingProgramId = this.get("Id");
 				// Объект, который будет передан в качестве аргумента в метод executeProcess().
 				var args = {
@@ -121,11 +144,6 @@ define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessMo
 					"click": {bindTo: "onAddSomeSwimmingLessonsClick"},
 					// Стиль отображения кнопки.
 					"style": Terrasoft.controls.ButtonEnums.style.GREEN,
-					"layout": {
-						"column": 1,
-						"row": 6,
-						"colSpan": 1
-					}
 				}
 			},
 			{
