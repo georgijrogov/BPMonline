@@ -1,4 +1,4 @@
-define("IteSwimmingProgram21b8e62aSection", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
+define("IteSwimmingProgramSection", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "IteSwimmingProgram",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
