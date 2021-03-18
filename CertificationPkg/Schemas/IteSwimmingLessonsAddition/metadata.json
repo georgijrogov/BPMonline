@@ -15,6 +15,14 @@
           "A4": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
           "A5": "4552e10d-4ee6-4e20-9c5e-7f79729cef54",
           "GF1": "null"
+        },
+        {
+          "UId": "01ae1bc8-aa26-4658-8a65-53e1b619796b",
+          "A2": "System",
+          "A3": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
+          "A4": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
+          "A5": "4552e10d-4ee6-4e20-9c5e-7f79729cef54",
+          "GF1": "null"
         }
       ],
       "B6": "a3268297-5da7-4ac4-80fa-4bc375ea67ab",
@@ -1302,7 +1310,7 @@
           "BO3": true,
           "BP2": [],
           "CL2": "FFFFFFFF",
-          "CH1": "string messageText = \"Данные добавлены\";\n// Присвоение сообщению имени.\nstring sender = \"ReloadPageMessage\";\nMsgChannelUtilities.PostMessageToAll(sender, messageText);\nreturn true;",
+          "CH1": "Guid swimmingProgramId = Get<Guid>(\"ProcessSchemaSwimmingProgramId\");\nMsgChannelUtilities.PostMessage(UserConnection, \"OnLessonsAdded\", swimmingProgramId.ToString());\nreturn true;",
           "CH2": true
         },
         {

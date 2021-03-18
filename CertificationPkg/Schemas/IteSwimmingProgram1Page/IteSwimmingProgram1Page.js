@@ -2,15 +2,6 @@ define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessMo
 	return {
 		entitySchemaName: "IteSwimmingProgram",
 		attributes: {},
-		messages: {
-				//Имя сообщения.
-				"ReloadPageMessage": {
-					// Тип сообщения — широковещательное, без указания конкретного подписчика.
-					"mode": Terrasoft.MessageMode.BROADCAST,
-					// Направление сообщения — подписка.
-					"direction": Terrasoft.MessageDirectionType.SUBSCRIBE
-				}
-			},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
@@ -49,20 +40,21 @@ define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessMo
 		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
 			init: function() {
-					// Вызов родительского метода init().
-					this.callParent(arguments);
-					// Подписка на прием сообщения NewUserSet.
-					this.sandbox.subscribe("ReloadPageMessage", this.onReloadPageMessage, this);
-				},
-				// Обработчик события получения сообщения NewUserSet.
-			onReloadPageMessage: function(args) {
-					// Вывод содержимого в консоль браузера.
-					window.console.info("Получено сообщение: ReloadPageMessage");
-					this.updateDetail({
-						detail: "IteSchema952f0e99Detail97c77f90",
-						reloadAll: true
-					});
-				},
+				// Вызов родительского метода init().
+				this.callParent(arguments);
+				this.subscriptionFunction();
+			},
+			subscriptionFunction: function() {
+				Terrasoft.ServerChannel.on(Terrasoft.EventName.ON_MESSAGE,
+											this.onLessonsAdded, this);
+			},
+				// Обработчик события получения сообщения.
+			onLessonsAdded: function(scope, message) {
+				var swimmingProgramId = this.get("Id");
+				if (message && message.Header && message.Header.Sender === "OnLessonsAdded" && message.Body === swimmingProgramId){
+					this.updateDetail({"detail": "IteSchemaa75c604dDetail6e04f7f7"});
+				}
+			},
 			asyncValidate: function(callback, scope) {
 				this.callParent([function(response) {
 					if (!this.validateResponse(response)) {

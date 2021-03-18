@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
     "Name": "IteSwimmingLessonsAddition",
-    "ModifiedOnUtc": "\/Date(1615944444000)\/",
+    "ModifiedOnUtc": "\/Date(1616026581000)\/",
     "ManagerName": "ProcessSchemaManager",
     "Caption": "Автоматическое создание занятий в бассейне"
   }
