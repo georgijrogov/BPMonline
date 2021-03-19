@@ -1,4 +1,4 @@
-define("IteSwimmingProgram21b8e62aSection", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
+define("IteSwimmingProgramSection", ["ConfigurationEnums"], function(ConfigurationEnums) {
 	return {
 		entitySchemaName: "IteSwimmingProgram",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
@@ -10,7 +10,7 @@ define("IteSwimmingProgram21b8e62aSection", ["ProcessModuleUtilities"], function
 				var schemaName = this.getEditPageSchemaName(typeColumnValue);
 				this.set("ShowCloseButton", true);
 				window.open(Terrasoft.combinePath(Terrasoft.workspaceBaseUrl,"Nui/ViewModule.aspx#CardModuleV2",
-					schemaName, Terrasoft.ConfigurationEnums.CardStateV2.EDIT, primaryColumnValue));
+					schemaName, ConfigurationEnums.CardStateV2.EDIT, primaryColumnValue));
 			}
 		}
 	};
