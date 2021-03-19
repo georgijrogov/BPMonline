@@ -1,4 +1,4 @@
-define("IteSchemaSwimmingLessonsDetail", ["ConfigurationGrid", "ConfigurationGridGenerator",
+define("IteSchema952f0e99Detail", ["ConfigurationGrid", "ConfigurationGridGenerator",
     "ConfigurationGridUtilities"], function() {
 	return {
 		entitySchemaName: "IteSwimmingLesson",

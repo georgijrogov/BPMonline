@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Занятие в бассейне" />
+			<Item Name="Parameters.13ae1d9a-9bdc-494b-84a9-6767b9c58a10.Caption" Value="Длительность занятия" />
+			<Item Name="Parameters.1fea1be8-ed18-4b1d-8bcb-6e4b85abd53f.Caption" Value="Число участников" />
+			<Item Name="Parameters.243e7402-0118-4bb9-962d-59217c23c3d2.Caption" Value="Состояние занятия" />
+			<Item Name="Parameters.3b97a65c-888b-447f-bf5f-232736e4fc51.Caption" Value="Программа плавания" />
+			<Item Name="Parameters.8afa5b2c-43b2-447b-8eaf-5e6b429f0cd5.Caption" Value="Дата занятия" />
+			<Item Name="Parameters.c49bd85e-159a-49ee-b10a-3c3bca63d7d5.Value.c4841740-ff8c-406f-8626-1c78f78608bf.Caption" Value="Закрыть" />
+			<Item Name="Parameters.c49bd85e-159a-49ee-b10a-3c3bca63d7d5.Value.f073e66a-36ec-47d7-9c6a-e5952dbf05a3.Caption" Value="Сохранить" />
+			<Item Name="Parameters.eed979a2-c9ed-4244-a74d-a28c9d30c838.Caption" Value="Тренер" />
+		</Items>
+	</Group>
+</Resources>

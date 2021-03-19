@@ -1,4 +1,4 @@
-define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
+define("IteSwimmingProgram1Page", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "IteSwimmingProgram",
 		attributes: {},
@@ -12,8 +12,8 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 					"detailColumn": "IteSwimmingProgram"
 				}
 			},
-			"IteSchemaSwimmingLessonsDetail": {
-				"schemaName": "IteSchemaSwimmingLessonsDetail",
+			"IteSchema952f0e99Detail97c77f90": {
+				"schemaName": "IteSchema952f0e99Detail",
 				"entitySchemaName": "IteSwimmingLesson",
 				"filter": {
 					"detailColumn": "IteProgram",
@@ -52,7 +52,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 			onLessonsAdded: function(scope, message) {
 				var swimmingProgramId = this.get("Id");
 				if (message && message.Header && message.Header.Sender === "OnLessonsAdded" && message.Body === swimmingProgramId){
-					this.updateDetail({"detail": "IteSchemaSwimmingLessonsDetail"});
+					this.updateDetail({"detail": "IteSchemaa75c604dDetail6e04f7f7"});
 				}
 			},
 			asyncValidate: function(callback, scope) {
@@ -256,7 +256,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 			},
 			{
 				"operation": "insert",
-				"name": "IteSchemaSwimmingLessonsDetail",
+				"name": "IteSchema952f0e99Detail97c77f90",
 				"values": {
 					"itemType": 2,
 					"markerValue": "added-detail"

@@ -1,0 +1,78 @@
+= MetaData.Schema.UId "583bd248-57ac-49de-84c0-a234de520f17"
+= MetaData.Schema.A2 "IteClientUnit_4b4e757"
+= MetaData.Schema.B6 "a3268297-5da7-4ac4-80fa-4bc375ea67ab"
+= MetaData.Schema.B8 "7.16.2.1600"
+= MetaData.Schema.HD1 "5826ff24-46c6-4169-9223-2aaad9ec2e18"
+= MetaData.Schema.HD11.["c49bd85e-159a-49ee-b10a-3c3bca63d7d5"].L8.GS2 "{\"$type\":\"Terrasoft.Core.Process.LocalizableParameterValuesList, Terrasoft.Core\",\"$values\":[{\"ItemUId\":\"f073e66a-36ec-47d7-9c6a-e5952dbf05a3\",\"Id\":{\"value\":\"f073e66a-36ec-47d7-9c6a-e5952dbf05a3\"},\"Name\":{\"value\":\"Button-be6148b819154a0791eaee8f1635d859\"},\"Tag\":{\"value\":\"SaveData\"},\"Caption\":{\"isLczValue\":true},\"PerformClosePage\":{\"value\":\"True\"},\"PerformSaveData\":{\"value\":\"True\"},\"GenerateSignal\":{\"value\":\"\"}},{\"ItemUId\":\"c4841740-ff8c-406f-8626-1c78f78608bf\",\"Id\":{\"value\":\"c4841740-ff8c-406f-8626-1c78f78608bf\"},\"Name\":{\"value\":\"Button-3a8ac667899d4aa68021a07eb1c7c49c\"},\"Tag\":{\"value\":\"ClosePage\"},\"Caption\":{\"isLczValue\":true},\"PerformClosePage\":{\"value\":\"False\"},\"PerformSaveData\":{\"value\":\"False\"},\"GenerateSignal\":{\"value\":\"\"}}]}"
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "566e7c84-940d-45d3-b132-6073746b4368",
+  "A2": "IteLessonDate",
+  "A3": "583bd248-57ac-49de-84c0-a234de520f17",
+  "A4": "583bd248-57ac-49de-84c0-a234de520f17",
+  "L1": "603d4960-a1a2-45e9-b232-206a54421b01",
+  "L8": {
+    "GS2": ""
+  }
+}
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "e8090ca6-9221-42c0-825b-cdbd76b7e093",
+  "A2": "IteDuration",
+  "A3": "583bd248-57ac-49de-84c0-a234de520f17",
+  "A4": "583bd248-57ac-49de-84c0-a234de520f17",
+  "L1": "603d4960-a1a2-45e9-b232-206a54421b01",
+  "L8": {
+    "GS2": ""
+  }
+}
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "aac8464d-ad3a-42f5-8bb4-5101dd354cf1",
+  "A2": "IteCoach",
+  "A3": "583bd248-57ac-49de-84c0-a234de520f17",
+  "A4": "583bd248-57ac-49de-84c0-a234de520f17",
+  "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "L8": {
+    "GS2": ""
+  },
+  "L9": "16be3651-8fe2-4159-8dd0-a803d4683dd3"
+}
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "edfea03e-6618-415b-81e3-3a44c8f0e7d3",
+  "A2": "IteSwimmingProgram",
+  "A3": "583bd248-57ac-49de-84c0-a234de520f17",
+  "A4": "583bd248-57ac-49de-84c0-a234de520f17",
+  "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "L8": {
+    "GS2": ""
+  },
+  "L9": "76ddc048-f741-4b14-a465-cd859f6a7d0d"
+}
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "2e284a31-c5b6-4c33-999c-59b16f2e103f",
+  "A2": "IteLessonStatus",
+  "A3": "583bd248-57ac-49de-84c0-a234de520f17",
+  "A4": "583bd248-57ac-49de-84c0-a234de520f17",
+  "L1": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "L8": {
+    "GS2": ""
+  },
+  "L9": "a5633046-6291-43d6-8f0d-c35f3d1733a3"
+}
++ MetaData.Schema.HD11 {
+  "BL1": "Terrasoft.Core.ClientUnitSchemaParameter",
+  "UId": "5d8f8c66-5efd-4b98-bd49-0fcf612a89c2",
+  "A2": "IteMembersQuantity",
+  "A3": "583bd248-57ac-49de-84c0-a234de520f17",
+  "A4": "583bd248-57ac-49de-84c0-a234de520f17",
+  "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+  "L8": {
+    "GS2": ""
+  }
+}
+~ MetaData.Schema.HD11 ["c49bd85e-159a-49ee-b10a-3c3bca63d7d5","566e7c84-940d-45d3-b132-6073746b4368","e8090ca6-9221-42c0-825b-cdbd76b7e093","aac8464d-ad3a-42f5-8bb4-5101dd354cf1","edfea03e-6618-415b-81e3-3a44c8f0e7d3","2e284a31-c5b6-4c33-999c-59b16f2e103f","5d8f8c66-5efd-4b98-bd49-0fcf612a89c2"]
+- MetaData.Schema.B7
++ MetaData.Schema.B7 false
