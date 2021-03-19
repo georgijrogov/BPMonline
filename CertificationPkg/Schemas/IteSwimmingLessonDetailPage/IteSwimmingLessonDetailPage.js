@@ -1,4 +1,4 @@
-define("IteIteSwimmingLessond24e6526Page", [], function() {
+define("IteSwimmingLessonDetailPage", [], function() {
 	return {
 		entitySchemaName: "IteSwimmingLesson",
 		attributes: {},
