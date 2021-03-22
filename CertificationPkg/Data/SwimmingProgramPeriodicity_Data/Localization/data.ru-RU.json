@@ -15,7 +15,7 @@
         {
           "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
           "ColumnName": "Name",
-          "Value": "Ежедневно"
+          "Value": ""
         }
       ]
     },
@@ -34,7 +34,7 @@
         {
           "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
           "ColumnName": "Name",
-          "Value": "Ежемесячно"
+          "Value": ""
         }
       ]
     },
@@ -53,7 +53,7 @@
         {
           "SchemaColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
           "ColumnName": "Name",
-          "Value": "Еженедельно"
+          "Value": ""
         }
       ]
     }
