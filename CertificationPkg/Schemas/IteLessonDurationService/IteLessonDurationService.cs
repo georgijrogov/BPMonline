@@ -28,9 +28,8 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 			{
 				overallDuration += entity.GetTypedColumnValue<int>(lessonDurationCol.Name);
 			}
-			int result = entities.Count != 0 ? overallDuration : -1;
 
-			return result;
+			return entities.Count != 0 ? overallDuration : -1;;
 		}
 	}
 }
