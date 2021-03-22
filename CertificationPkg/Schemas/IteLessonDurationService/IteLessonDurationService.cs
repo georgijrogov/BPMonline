@@ -15,9 +15,9 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
 		ResponseFormat = WebMessageFormat.Json)]
-		public string GetDuration(string programId)
+		public int GetDuration(string programId)
 		{
-			TimeSpan overallDuration = new TimeSpan(0, 0, 0);
+			int overallDuration = 0;
 			var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "IteSwimmingLesson");
 			var lessonDurationCol = esq.AddColumn("IteDuration");
 			var esqFilter = esq.CreateFilterWithParameters(FilterComparisonType.Equal, "IteProgram.Id", programId);
@@ -26,9 +26,9 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 			
 			foreach (var entity in entities)
 			{
-				overallDuration += entity.GetTypedColumnValue<TimeSpan>(lessonDurationCol.Name);
+				overallDuration += entity.GetTypedColumnValue<int>(lessonDurationCol.Name);
 			}
-			string result = entities.Count != 0 ? overallDuration.ToString() : "-1";
+			int result = entities.Count != 0 ? overallDuration : -1;
 
 			return result;
 		}

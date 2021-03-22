@@ -4,7 +4,7 @@
 		<Items>
 			<Item Name="Caption" Value="Занятия в бассейне" />
 			<Item Name="Columns.IteCoach.Caption" Value="Тренер" />
-			<Item Name="Columns.IteDuration.Caption" Value="Длительность" />
+			<Item Name="Columns.IteDuration.Caption" Value="Длительность (минут)" />
 			<Item Name="Columns.IteLessonDate.Caption" Value="Дата занятия" />
 			<Item Name="Columns.IteMemberQuantity.Caption" Value="Число участников" />
 			<Item Name="Columns.IteProgram.Caption" Value="Программа плавания" />
