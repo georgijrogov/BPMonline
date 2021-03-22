@@ -53,7 +53,7 @@
 			<Item Name="NotificationCaption.Caption" Value="Заголовок экземпляра процесса" />
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Название процесса#]" />
 			<Item Name="Parameters.ProcessSchemaIterator.Caption" Value="Итератор" />
-			<Item Name="Parameters.ProcessSchemaIterator.DisplayValue" Value="1" />
+			<Item Name="Parameters.ProcessSchemaIterator.DisplayValue" Value="0" />
 			<Item Name="Parameters.ProcessSchemaStartDate.Caption" Value="Дата начала" />
 			<Item Name="Parameters.ProcessSchemaStartDate.DisplayValue" Value="[#Системная переменная.Текущее значение даты и времени#]" />
 			<Item Name="Parameters.ProcessSchemaSwimmingProgramId.Caption" Value="Id программы плавания" />
