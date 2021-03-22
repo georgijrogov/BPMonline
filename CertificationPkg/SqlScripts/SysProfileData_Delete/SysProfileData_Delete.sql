@@ -1,0 +1,1 @@
+DELETE FROM "SysProfileData" WHERE "Key"='IteSwimmingProgramPageIteSchemaSwimmingLessonDetail'

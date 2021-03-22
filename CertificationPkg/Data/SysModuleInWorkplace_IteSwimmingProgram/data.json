@@ -4,6 +4,72 @@
       "Row": [
         {
           "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "8c8d548e-abab-4a05-817e-077eb990b805"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 4
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "005063c9-8180-e011-afbc-00155d04320c",
+          "DisplayValue": "Контрагенты"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "79770671-cde2-4c0f-9078-a4ff68703def",
+          "DisplayValue": "Общее"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "9ce66c67-95e3-41c7-93d2-0a4ff510bb5b"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "0c5063c9-8180-e011-afbc-00155d04320c",
+          "DisplayValue": "Итоги"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "79770671-cde2-4c0f-9078-a4ff68703def",
+          "DisplayValue": "Общее"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "f7a403d4-24fb-4e8f-a7f8-0a6be1ce8295"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 2
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "ebf36756-7854-4169-b2cc-8bc0ea25f391",
+          "DisplayValue": "Сотрудники"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "79770671-cde2-4c0f-9078-a4ff68703def",
+          "DisplayValue": "Общее"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
           "Value": "47c0ebf5-b663-4362-af7e-6827d5449950"
         },
         {
@@ -14,6 +80,72 @@
           "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
           "Value": "0bec4448-69eb-4c2b-b069-920ebdfb6394",
           "DisplayValue": "Программы плавания"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "79770671-cde2-4c0f-9078-a4ff68703def",
+          "DisplayValue": "Общее"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "bbc0255b-05f3-4db9-af31-73d963b6bbd4"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 6
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "4e55cdcd-8cab-433e-aecd-a181ff149631",
+          "DisplayValue": "Лента"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "79770671-cde2-4c0f-9078-a4ff68703def",
+          "DisplayValue": "Общее"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "4e41c284-0873-43b8-a1b5-994c4f74241d"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 5
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "055063c9-8180-e011-afbc-00155d04320c",
+          "DisplayValue": "Активности"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "79770671-cde2-4c0f-9078-a4ff68703def",
+          "DisplayValue": "Общее"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "44394754-959e-40ee-9549-f641409238e4"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 3
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "065063c9-8180-e011-afbc-00155d04320c",
+          "DisplayValue": "Контакты"
         },
         {
           "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",

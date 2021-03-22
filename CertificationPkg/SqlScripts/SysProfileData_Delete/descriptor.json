@@ -1,0 +1,10 @@
+﻿{
+  "SqlScript": {
+    "UId": "ff875945-513d-4777-9cde-5c31411fa4e2",
+    "Name": "SysProfileData_Delete",
+    "DBEngineType": 0,
+    "InstallType": 0,
+    "ModifiedOnUtc": "\/Date(1616455299000)\/",
+    "DependsOn": []
+  }
+}
