@@ -91,7 +91,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 					esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
 						"IteIsActive", true));
 					esq.getEntityCollection(function(response) {
-						if (response && response.collection && response.collection.getCount() >= maxCount){
+						if (response && response.collection && response.collection.getCount() > maxCount){
 							result.message = ermsg.replace("{0}", maxCount);
 							result.success = false;
 						}
