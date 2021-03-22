@@ -81,7 +81,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 					var active = this.get("IteIsActive");
 					var result = {success: true};
 					var ermsg = this.get("Resources.Strings.TooManyActiveDailyProgramCaption");
-					if (frequency.displayValue !== "Ежедневно" || active === false){
+					if (!frequency || frequency.Id !== idPeriodicity || !active || active === false){
 						callback.call(scope || this, result);
 						return;
 					}
@@ -105,7 +105,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 				var args = {
 					// Имя процесса, который необходимо запустить.
 					sysProcessName: "IteSwimmingLessonsAddition",
-					// Объект со значением входящего параметра ContactParameter для процесса CustomProcess.
+					// Объект со значением входящего параметра для процесса CustomProcess.
 					parameters: {
 						ProcessSchemaSwimmingProgramId: swimmingProgramId
 					}
