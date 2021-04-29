@@ -9,12 +9,14 @@
 			<Item Name="BaseElements.AddDataUserTask1.Parameters.RecordAddMode.Caption" Value="Режим добавления записей" />
 			<Item Name="BaseElements.AddDataUserTask1.Parameters.RecordDefValues.Caption" Value="Значения полей" />
 			<Item Name="BaseElements.AddDataUserTask1.Parameters.RecordId.Caption" Value="Id созданной записи" />
+			<Item Name="BaseElements.AddDataUserTask2.Caption" Value="Добавить занятие" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.DataSourceFilters.Caption" Value="Фильтры источника данных" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.EntitySchemaId.Caption" Value="Объект" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.FilterEntitySchemaId.Caption" Value="Объект выборки" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordAddMode.Caption" Value="Режим добавления записей" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordDefValues.Caption" Value="Значения полей" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordId.Caption" Value="Id созданной записи" />
+			<Item Name="BaseElements.AddDataUserTask3.Caption" Value="Добавить занятие" />
 			<Item Name="BaseElements.AddDataUserTask3.Parameters.DataSourceFilters.Caption" Value="Фильтры источника данных" />
 			<Item Name="BaseElements.AddDataUserTask3.Parameters.EntitySchemaId.Caption" Value="Объект" />
 			<Item Name="BaseElements.AddDataUserTask3.Parameters.FilterEntitySchemaId.Caption" Value="Объект выборки" />
@@ -23,9 +25,9 @@
 			<Item Name="BaseElements.AddDataUserTask3.Parameters.RecordId.Caption" Value="Id созданной записи" />
 			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="Ежедневно" />
 			<Item Name="BaseElements.ConditionalSequenceFlow3.Caption" Value="Еженедельно" />
-			<Item Name="BaseElements.ConditionalSequenceFlow6.Caption" Value="Условный поток 6" />
-			<Item Name="BaseElements.ConditionalSequenceFlow8.Caption" Value="Условный поток 8" />
-			<Item Name="BaseElements.DefaultSequenceFlow4.Caption" Value="Условный поток 5" />
+			<Item Name="BaseElements.ConditionalSequenceFlow6.Caption" Value="Если итератор &lt; 8" />
+			<Item Name="BaseElements.ConditionalSequenceFlow8.Caption" Value="Ежемесячно" />
+			<Item Name="BaseElements.FormulaTask1.Caption" Value="Добавить к итератору 1" />
 			<Item Name="BaseElements.ReadDataUserTask1.Caption" Value="Получить периодичность" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.AggregationColumnName.Caption" Value="Имя колонки для агрегирующей функции" />
 			<Item Name="BaseElements.ReadDataUserTask1.Parameters.CanReadUncommitedData.Caption" Value="Выполнять &quot;грязное чтение&quot;" />

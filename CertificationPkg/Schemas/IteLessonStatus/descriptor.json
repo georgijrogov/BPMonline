@@ -2,12 +2,13 @@
   "Descriptor": {
     "UId": "a5633046-6291-43d6-8f0d-c35f3d1733a3",
     "Name": "IteLessonStatus",
-    "ModifiedOnUtc": "\/Date(1614361547000)\/",
+    "ModifiedOnUtc": "\/Date(1619606125000)\/",
     "Parent": {
       "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
       "Name": "BaseLookup"
     },
     "ManagerName": "EntitySchemaManager",
-    "Caption": "Состояния занятий"
+    "Caption": "Состояния занятий",
+    "DependsOn": []
   }
 }

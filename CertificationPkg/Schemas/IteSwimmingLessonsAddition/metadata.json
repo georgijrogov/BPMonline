@@ -1599,18 +1599,18 @@
           "A3": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
           "A4": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
           "ParentUId": "5bb8ced9-00ba-4060-b5e8-46da42aa4486",
-          "X": -25,
+          "X": -8,
           "Y": 83
         },
         {
           "BL1": "Terrasoft.Core.Process.ProcessSchemaLabel",
-          "UId": "b00905c4-2af7-63cd-15d6-ddd4a8745c48",
-          "A2": "ConditionalSequenceFlow5_label1",
+          "UId": "6ce5ed89-daf2-4ed6-9b9f-1660be7e37f0",
+          "A2": "ConditionalSequenceFlow6_label1",
           "A3": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
           "A4": "299ff0a8-3aa2-4e72-9e6a-d91da4c76b23",
-          "ParentUId": "6a874014-9763-4b7d-93a2-fe77a894eb3b",
-          "X": -25,
-          "Y": 193
+          "ParentUId": "5ccb0f92-f589-46a4-9fb1-a3334592dcd1",
+          "X": 37,
+          "Y": 47
         }
       ],
       "BK24": []

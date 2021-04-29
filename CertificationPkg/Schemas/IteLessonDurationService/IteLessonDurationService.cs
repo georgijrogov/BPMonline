@@ -6,7 +6,7 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 	using System.ServiceModel.Activation;
 	using Terrasoft.Core;
 	using Terrasoft.Web.Common;
-	using Terrasoft.Core.Entities; 
+	using Terrasoft.Core.Entities;
 
 	[ServiceContract]
 	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
@@ -15,8 +15,13 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 		[OperationContract]
 		[WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped,
 		ResponseFormat = WebMessageFormat.Json)]
-		public int GetDuration(string programId)
+		public int GetDuration(Guid programId)
 		{
+			if (programId == Guid.Empty)
+			{
+				return -1;
+			}
+			
 			int overallDuration = 0;
 			var esq = new EntitySchemaQuery(UserConnection.EntitySchemaManager, "IteSwimmingLesson");
 			var lessonDurationCol = esq.AddColumn("IteDuration");
@@ -29,7 +34,7 @@ namespace Terrasoft.Configuration.IteLessonDurationService
 				overallDuration += entity.GetTypedColumnValue<int>(lessonDurationCol.Name);
 			}
 
-			return entities.Count != 0 ? overallDuration : -1;;
+			return entities.Count != 0 ? overallDuration : -1;
 		}
 	}
 }

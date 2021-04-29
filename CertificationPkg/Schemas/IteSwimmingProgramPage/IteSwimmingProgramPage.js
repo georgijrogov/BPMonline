@@ -1,17 +1,14 @@
 define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "IteSwimmingProgram",
-		attributes: {},
+		attributes: {
+			"MaxCount": {
+				dataValueType: this.Terrasoft.DataValueType.INTEGER,
+				value: 0
+			},
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
-			"Files": {
-				"schemaName": "FileDetailV2",
-				"entitySchemaName": "IteSwimmingProgramFile",
-				"filter": {
-					"masterColumn": "Id",
-					"detailColumn": "IteSwimmingProgram"
-				}
-			},
 			"IteSchemaSwimmingLessonDetail": {
 				"schemaName": "IteSchemaSwimmingLessonDetail",
 				"entitySchemaName": "IteSwimmingLesson",
@@ -57,10 +54,21 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 			},
 			asyncValidate: function(callback, scope) {
 				this.callParent([function(response) {
-					if (!this.validateResponse(response)) {
+					if (!this.validateResponse(response)){
+						return;
+					};
+					if (this.checkDependingColumns()){
+						callback.call(scope, {success: true})
 						return;
 					}
 					Terrasoft.chain(
+						function(next) {
+							this.getMaxActiveDailyLessonsValue(function(response) {
+								if (this.validateResponse(response)) {
+									next();
+								}
+							}, this);
+						},
 						function(next) {
 							this.validateSwimmingPrograms(function(response) {
 								if (this.validateResponse(response)) {
@@ -74,29 +82,42 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 						}, this);
 				}, this]);
 			},
-			validateSwimmingPrograms: function(callback, scope) {
+			checkDependingColumns: function(){
+				var idPeriodicity = "a815379d-f663-4d04-8a66-849b32c6f9e7";
+				var frequency = this.get("ItePeriodicity");
+				var active = this.get("IteIsActive");
+				return (!frequency || frequency.value !== idPeriodicity || !active || active === false);
+			},
+			getMaxActiveDailyLessonsValue: function(callback, scope) {
 				Terrasoft.SysSettings.querySysSettingsItem("MaxActiveDailyLessons", function(maxCount) {
-					const idPeriodicity = "a815379d-f663-4d04-8a66-849b32c6f9e7";
-					var frequency = this.get("ItePeriodicity");
-					var active = this.get("IteIsActive");
 					var result = {success: true};
-					var ermsg = this.get("Resources.Strings.TooManyActiveDailyProgramCaption");
-					if (!frequency || frequency.Id !== idPeriodicity || !active || active === false){
+					if (typeof(maxCount) === "number"){
+						this.set("MaxCount", maxCount);
 						callback.call(scope || this, result);
-						return;
+					} else {
+						result.success = false;
+						result.message = "Получено некорректное значение"
+						callback.call(scope || this, result);
 					}
-					var esq = Ext.create("Terrasoft.EntitySchemaQuery", { rootSchemaName: "IteSwimmingProgram" });
-					esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 
-						"ItePeriodicity.Id", idPeriodicity));
-					esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
-						"IteIsActive", true));
-					esq.getEntityCollection(function(response) {
-						if (response && response.collection && response.collection.getCount() + 1 > maxCount){
-							result.message = ermsg.replace("{0}", maxCount);
+				}, this);
+			},
+			validateSwimmingPrograms: function(callback, scope) {
+				var idPeriodicity = "a815379d-f663-4d04-8a66-849b32c6f9e7";
+				var result = {success: true}
+				var ermsg = this.get("Resources.Strings.TooManyActiveDailyProgramCaption");
+				var esq = Ext.create("Terrasoft.EntitySchemaQuery", { rootSchemaName: "IteSwimmingProgram" });
+				esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 
+					"ItePeriodicity.Id", idPeriodicity));
+				esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL,
+					"IteIsActive", true));
+				esq.getEntityCollection(function(response) {
+					if (response) {
+						if (response.collection && response.collection.getCount() + 1 > this.get("MaxCount")){
+							result.message = ermsg.replace("{0}", this.get("MaxCount"));
 							result.success = false;
 						}
-						callback.call(scope || this, result);
-					}, this);
+					}						
+					callback.call(scope || this, result);
 				}, this);
 			},
 			onAddSomeSwimmingLessonsClick: function() {
