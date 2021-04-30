@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "bf6b2a2a-45c0-47a1-b7c8-c158a484a3f0",
     "Name": "IteLessonDurationService",
-    "ModifiedOnUtc": "\/Date(1619555812000)\/",
+    "ModifiedOnUtc": "\/Date(1619783063000)\/",
     "ManagerName": "SourceCodeSchemaManager",
     "Caption": "Сервис суммирования длительности запланированных занятий"
   }

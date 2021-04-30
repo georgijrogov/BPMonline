@@ -56,9 +56,9 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 				this.callParent([function(response) {
 					if (!this.validateResponse(response)){
 						return;
-					};
-					if (this.checkDependingColumns()){
-						callback.call(scope, {success: true})
+					}
+					if (this.checkDependentColumns()){
+						callback.call(scope, {success: true});
 						return;
 					}
 					Terrasoft.chain(
@@ -82,7 +82,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 						}, this);
 				}, this]);
 			},
-			checkDependingColumns: function(){
+			checkDependentColumns: function(){
 				var idPeriodicity = "a815379d-f663-4d04-8a66-849b32c6f9e7";
 				var frequency = this.get("ItePeriodicity");
 				var active = this.get("IteIsActive");
@@ -96,14 +96,14 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 						callback.call(scope || this, result);
 					} else {
 						result.success = false;
-						result.message = "Получено некорректное значение"
+						result.message = this.get("Resources.Strings.UncorrectValueCaption");
 						callback.call(scope || this, result);
 					}
 				}, this);
 			},
 			validateSwimmingPrograms: function(callback, scope) {
 				var idPeriodicity = "a815379d-f663-4d04-8a66-849b32c6f9e7";
-				var result = {success: true}
+				var result = {success: true};
 				var ermsg = this.get("Resources.Strings.TooManyActiveDailyProgramCaption");
 				var esq = Ext.create("Terrasoft.EntitySchemaQuery", { rootSchemaName: "IteSwimmingProgram" });
 				esq.filters.addItem(esq.createColumnFilterWithParameter(Terrasoft.ComparisonType.EQUAL, 
@@ -113,7 +113,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 				esq.getEntityCollection(function(response) {
 					if (response) {
 						if (response.collection && response.collection.getCount() + 1 > this.get("MaxCount")){
-							result.message = ermsg.replace("{0}", this.get("MaxCount"));
+							result.message = Ext.String.format(ermsg, this.get("MaxCount"));
 							result.success = false;
 						}
 					}						

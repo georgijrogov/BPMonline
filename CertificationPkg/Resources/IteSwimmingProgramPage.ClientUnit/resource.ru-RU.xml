@@ -6,6 +6,7 @@
 			<Item Name="LocalizableStrings.AddSomeSwimmingLessons.Value" Value="Добавить несколько занятий" />
 			<Item Name="LocalizableStrings.Tab78343efaTabLabelTabCaption.Value" Value="Занятия в бассейне" />
 			<Item Name="LocalizableStrings.TooManyActiveDailyProgramCaption.Value" Value="Допускается не более {0} активных ежедневных программ плавания" />
+			<Item Name="LocalizableStrings.UncorrectValueCaption.Value" Value="Получено некорректное значение" />
 		</Items>
 	</Group>
 </Resources>
