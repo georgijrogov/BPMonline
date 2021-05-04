@@ -1,4 +1,4 @@
-define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
+define("IteSwimmingProgramPage", ["IteSwimmingProgramPageConstants", "ProcessModuleUtilities"], function( IteSwimmingProgramPageConstants, ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "IteSwimmingProgram",
 		attributes: {
@@ -83,7 +83,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 				}, this]);
 			},
 			checkDependentColumns: function(){
-				var idPeriodicity = this.get("Resources.Strings.DailyPeriodicityId");
+				var idPeriodicity = IteSwimmingProgramPageConstants.DailyPeriodicity;
 				var frequency = this.get("ItePeriodicity");
 				var active = this.get("IteIsActive");
 				return (!frequency || frequency.value !== idPeriodicity || !active || active === false);
@@ -102,7 +102,7 @@ define("IteSwimmingProgramPage", ["ProcessModuleUtilities"], function(ProcessMod
 				}, this);
 			},
 			validateSwimmingPrograms: function(callback, scope) {
-				var idPeriodicity = "a815379d-f663-4d04-8a66-849b32c6f9e7";
+				var idPeriodicity = IteSwimmingProgramPageConstants.DailyPeriodicity;
 				var result = {success: true};
 				var ermsg = this.get("Resources.Strings.TooManyActiveDailyProgramCaption");
 				var esq = Ext.create("Terrasoft.EntitySchemaQuery", { rootSchemaName: "IteSwimmingProgram" });
